@@ -1,7 +1,9 @@
 from turtle import *
 from random import randrange
 from freegames import square, vector
-
+"""
+Code for Snake Game
+"""
 food = vector(0, 0)
 snake = [vector(20, 0)]
 aim = vector(0, -20)
