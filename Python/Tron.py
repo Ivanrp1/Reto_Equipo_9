@@ -11,7 +11,7 @@ p2body = set()
 
 def inside(head):
     "Return True if head inside screen."
-    return -200 < head.x < 200 and -200 < head.y < 200
+    return -100 < head.x < 100 and -100 < head.y < 100
 
 def draw():
     "Advance players and draw game."
@@ -47,3 +47,5 @@ onkey(lambda: p2aim.rotate(90), 'j')
 onkey(lambda: p2aim.rotate(-90), 'l')
 draw()
 done()
+
+
