@@ -26,7 +26,7 @@ def draw():
         return
 
     if not inside(p2head) or p2head in p1body:
-        print('Player red wins!')
+        print('Player blue wins!')
         return
 
     p1body.add(p1head)
