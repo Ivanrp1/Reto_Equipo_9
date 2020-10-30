@@ -37,9 +37,15 @@ def move():
     clear()
 
     for body in snake:
+<<<<<<< HEAD
         square(body.x, body.y, 14, 'black')
 
     square(food.x, food.y, 14, 'green')
+=======
+        square(body.x, body.y, 9, 'green')
+
+    square(food.x, food.y, 9, 'red')
+>>>>>>> b0caac4a2b145594fce387d15d08e4ec922f94a7
     update()
     ontimer(move, 100)
 

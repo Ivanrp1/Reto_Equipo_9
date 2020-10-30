@@ -9,10 +9,17 @@ targets = []
 def tap(x, y):
     "Respond to screen tap."
     if not inside(ball):
+<<<<<<< HEAD
         ball.x = -149
         ball.y = -149
         speed.x = (x + 150) / 25
         speed.y = (y + 150) / 25
+=======
+        ball.x = -199
+        ball.y = -199
+        speed.x = (x + 150) / 25
+        speed.y = (y + 300) / 25
+>>>>>>> b0caac4a2b145594fce387d15d08e4ec922f94a7
 
 def inside(xy):
     "Return True if xy within screen."
@@ -43,7 +50,7 @@ def move():
         target.x -= 0.5
 
     if inside(ball):
-        speed.y -= 0.35
+        speed.y -= 0.8
         ball.move(speed)
 
     dupe = targets.copy()
