@@ -3,8 +3,8 @@ from random import randrange
 from freegames import square, vector
 
 food = vector(0, 0)
-snake = [vector(15, 0)]
-aim = vector(0, -15)
+snake = [vector(20, 0)]
+aim = vector(0, -20)
 
 def change(x, y):
     "Change snake direction."
@@ -47,9 +47,9 @@ setup(420, 420, 370, 0)
 hideturtle()
 tracer(False)
 listen()
-onkey(lambda: change(15, 0), 'Right')
-onkey(lambda: change(-15, 0), 'Left')
-onkey(lambda: change(0, 15), 'Up')
-onkey(lambda: change(0, -15), 'Down')
+onkey(lambda: change(20, 0), 'Right')
+onkey(lambda: change(-20, 0), 'Left')
+onkey(lambda: change(0, 20), 'Up')
+onkey(lambda: change(0, -20), 'Down')
 move()
 done()
