@@ -1,10 +1,12 @@
 from turtle import *
 from random import randrange
 from freegames import square, vector
-
+"""
+Code for Snake Game
+"""
 food = vector(0, 0)
-snake = [vector(10, 0)]
-aim = vector(0, -10)
+snake = [vector(20, 0)]
+aim = vector(0, -20)
 
 def change(x, y):
     "Change snake direction."
@@ -21,7 +23,7 @@ def move():
     head.move(aim)
 
     if not inside(head) or head in snake:
-        square(head.x, head.y, 9, 'red')
+        square(head.x, head.y, 14, 'red')
         update()
         return
 
@@ -37,9 +39,15 @@ def move():
     clear()
 
     for body in snake:
+<<<<<<< HEAD
+        square(body.x, body.y, 14, 'black')
+
+    square(food.x, food.y, 14, 'green')
+=======
         square(body.x, body.y, 9, 'green')
 
     square(food.x, food.y, 9, 'red')
+>>>>>>> b0caac4a2b145594fce387d15d08e4ec922f94a7
     update()
     ontimer(move, 100)
 
@@ -47,9 +55,9 @@ setup(420, 420, 370, 0)
 hideturtle()
 tracer(False)
 listen()
-onkey(lambda: change(10, 0), 'Right')
-onkey(lambda: change(-10, 0), 'Left')
-onkey(lambda: change(0, 10), 'Up')
-onkey(lambda: change(0, -10), 'Down')
+onkey(lambda: change(20, 0), 'Right')
+onkey(lambda: change(-20, 0), 'Left')
+onkey(lambda: change(0, 20), 'Up')
+onkey(lambda: change(0, -20), 'Down')
 move()
 done()
